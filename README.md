@@ -1,6 +1,6 @@
 __README.md__ 
 
-* clone the repository:                                                                                                                                                   > git clone https://markf_rudolph@bitbucket.org/markf_rudolph/backpropagation.git
+* clone the repository:                                                                                                                                                   > git clone https://mark_rudolph@github.com/josefK128/backpropagation.git
   
 * install python 3.X (current latest 3.8) - see 
   https://www.python.org/downloads/ - simply click download button and follow 
