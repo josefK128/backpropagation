@@ -1,0 +1,192 @@
+# backprop222_diagnostics.txt
+
+
++++++++++++ backprop222.py +++++++++++++++++++++
+backprop222.py running as __main__
+nargs = 2
+action: iterations = 1 diag = True
+
+constant data input for each training iteration) (2x1)
+[[0.05]
+ [0.1 ]]
+constant target output (2x1)
+[[0.01]
+ [0.99]]
+-------------------------------------------------------
+*** iteration = 0
+
+forward propagation::
+input:
+i1 = 0.05
+i2 = 0.1
+
+hidden:
+ih1 = 0.3775
+ih2 = 0.39249999999999996
+h1 = 0.5932699921071872
+h2 = 0.596884378259767
+
+output:
+ho1 = 1.10590596705977
+ho2 = 1.2249214040964653
+o1 = 0.7513650695523157
+o2 = 0.7729284653214625
+
+error:
+E1 = 0.274811083176155
+E2 = 0.023560025583847746
+E = 0.2983711087600027
+
+**** back propagation for hidden->output weights whojk:
+
+o1-target1 = 0.7413650695523157
+o1 = 0.7513650695523157
+dsigma(o1) = 0.18681560180895948
+h1 = 0.5932699921071872
+ho-gradient 1,1 is 0.08216704056423078
+prev weight who11 is 0.4
+prev weight who11 is 0.4
+@@@@new weight who11 is 0.35891647971788465
+
+o1-target1 = 0.7413650695523157
+o1 = 0.7513650695523157
+dsigma(o1) = 0.18681560180895948
+h1 = 0.5932699921071872
+ho-gradient 2,1 is 0.08216704056423078
+prev weight who21 is 0.45
+@@@@new weight who21 is 0.40891647971788464
+
+o2-target2 = -0.21707153467853746
+o2 = 0.7729284653214625
+dsigma(o2) = 0.17551005281727122
+h2 = 0.596884378259767
+ho-gradient 1,2 is -0.02274024221597822
+prev weight who12 is 0.5
+@@@@new weight who12 is 0.5113701211079891
+
+o1-target1 = 0.7413650695523157
+o2 = 0.7729284653214625
+dsigma(o2) = 0.17551005281727122
+h2 = 0.596884378259767
+ho-gradient 2,2 is -0.02274024221597822
+prev weight who22 is 0.55
+@@@@new weight who22 is 0.5613701211079891
+
+
+**** back propagation for input->hidden weights whiij:
+
+o1-target1 = 0.7413650695523157
+dsigma(o1) = 0.18681560180895948
+pwho11 = 0.4
+PDE1_h1 = 0.05539942465142279
+
+o2-target2 = -0.21707153467853746
+dsigma(o2) = -0.2755110421171908
+pwho12 = 0.5
+PDE2_h1 = -0.019049118258278114
+
+PDE_h1 = 0.03635030639314468
+dsigma(h1) = 0.24130070857232525
+i1 = 0.05
+gradient = 0.00043856773447434685
+alpha = 0.5
+prev weight wih11 is 0.15
+@@@@new weight wih11 is 0.1497807161327628
+
+
+**** back propagation for input->hidden weights whiij:
+
+o1-target1 = 0.7413650695523157
+dsigma(o1) = 0.18681560180895948
+pwho21 = 0.45
+PDE1_h2 = 0.06232435273285064
+
+o2-target2 = -0.21707153467853746
+dsigma(o2) = -0.2755110421171908
+pwho22 = 0.55
+PDE2_h2 = -0.02095403008410593
+
+PDE_h2 = 0.04137032264874471
+dsigma(h2) = 0.2406134172492184
+i1 = 0.05
+gradient = 0.0004977127352608601
+alpha = 0.5
+prev weight wih12 is 0.25
+@@@@new weight wih12 is 0.24975114363236958
+
+
+**** back propagation for input->hidden weights whiij:
+
+o1-target1 = 0.7413650695523157
+dsigma(o1) = 0.18681560180895948
+pwho11 = 0.4
+PDE1_h1 = 0.05539942465142279
+
+o2-target2 = -0.21707153467853746
+dsigma(o2) = -0.2755110421171908
+pwho12 = 0.5
+PDE2_h1 = -0.019049118258278114
+
+PDE_h1 = 0.03635030639314468
+dsigma(h1) = 0.24130070857232525
+i2 = 0.1
+gradient = 0.0008771354689486937
+alpha = 0.5
+prev weight wih21 is 0.2
+@@@@new weight wih21 is 0.19956143226552567
+
+
+**** back propagation for input->hidden weights whiij:
+
+o1-target1 = 0.7413650695523157
+dsigma(o1) = 0.18681560180895948
+pwho12 = 0.5
+PDE1_h2 = 0.06924928081427849
+
+o2-target2 = -0.21707153467853746
+dsigma(o2) = -0.2755110421171908
+pwho22 = 0.55
+PDE2_h2 = -0.02095403008410593
+
+PDE_h2 = 0.04829525073017256
+dsigma(h2) = 0.2406134172492184
+i2 = 0.1
+gradient = 0.001162048531509463
+alpha = 0.5
+prev weight wih22 is 0.3
+@@@@new weight wih22 is 0.29941897573424525
+-------------------------------------------------------
+
+
+
+final output:
+o1 = 0.7513650695523157
+o2 = 0.7729284653214625
+
+final error:
+E1 = 0.274811083176155
+E2 = 0.023560025583847746
+E = 0.2983711087600027
+-------------------------------------------------------
+
+
+@@@@@@final input->hidden weights:
+wih11 = 0.1497807161327628
+wih12 = 0.24975114363236958
+wih21 = 0.19956143226552567
+wih22 = 0.29941897573424525
+
+final hidden->output weights:
+who11 = 0.35891647971788465
+who12 = 0.5113701211079891
+who21 = 0.40891647971788464
+who22 = 0.5613701211079891
+
+final output:
+o1 = 0.7513650695523157
+o2 = 0.7729284653214625
+
+final error:
+E1 = 0.274811083176155
+E2 = 0.023560025583847746
+E = 0.2983711087600027
